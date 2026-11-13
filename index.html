@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Padel</title>
+  <style>
+    :root {
+      --hiekka: #f6eee3;
+      --hiekka-tumma: #ecdcc7;
+      --kortti: #fffaf3;
+      --terrakotta: #c0603f;
+      --terrakotta-tumma: #9c4a2f;
+      --teksti: #3d3631;
+      --teksti-vaalea: #6e635a;
+      --reuna: #e3d2bc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--hiekka);
+      color: var(--teksti);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .sivu {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      padding: 56px 0 24px;
+      text-align: center;
+    }
+
+    .ylaotsikko {
+      display: inline-block;
+      margin: 0 0 12px;
+      padding: 4px 14px;
+      border-radius: 999px;
+      background: var(--hiekka-tumma);
+      color: var(--terrakotta-tumma);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: var(--terrakotta);
+      font-size: clamp(2.2rem, 8vw, 3.4rem);
+      line-height: 1.1;
+    }
+
+    .alaotsikko {
+      margin: 0;
+      color: var(--teksti-vaalea);
+      font-size: 1.15rem;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--terrakotta-tumma);
+      font-size: 1.6rem;
+      line-height: 1.25;
+    }
+
+    section { margin: 40px 0; }
+
+    .esittely p { margin: 0 0 16px; }
+
+    /* Kuvapaikka */
+    .kuva {
+      margin: 40px 0;
+    }
+
+    .kuva img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .kuvapaikka {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      aspect-ratio: 4 / 3;
+      border: 2px dashed var(--reuna);
+      border-radius: 20px;
+      background: var(--hiekka-tumma);
+      color: var(--teksti-vaalea);
+      text-align: center;
+      padding: 16px;
+    }
+
+    .kuvapaikka svg { width: 88px; height: 88px; }
+
+    .kuvapaikka span { font-size: 1rem; }
+
+    /* Faktat */
+    .faktat {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (min-width: 720px) {
+      .faktat { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .fakta {
+      padding: 22px 20px;
+      border: 1px solid var(--reuna);
+      border-radius: 16px;
+      background: var(--kortti);
+    }
+
+    .numero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      background: var(--terrakotta);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .fakta h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+
+    .fakta p {
+      margin: 0;
+      color: var(--teksti-vaalea);
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 32px 0 56px;
+      text-align: center;
+      color: var(--teksti-vaalea);
+    }
+
+    footer strong {
+      display: block;
+      color: var(--terrakotta);
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="sivu">
+
+    <header>
+      <p class="ylaotsikko">Mailapeli kaikille</p>
+      <h1>Padel – ihastuttavan helppo laji</h1>
+      <p class="alaotsikko">Lasiseinät, neljä pelaajaa ja paljon naurua.</p>
+    </header>
+
+    <section class="esittely">
+      <h2>Mikä ihmeen padel?</h2>
+      <p>Padel on mailapeli, jossa on vähän tennistä ja ripaus squashia. Sitä pelataan lähes aina nelinpelinä pienellä kentällä, jota ympäröivät lasiseinät. Mailassa ei ole jänteitä, vaan se on tukeva ja reiällinen, ja pallo muistuttaa tennispalloa.</p>
+      <p>Lajin parhaita puolia on, että siihen pääsee mukaan nopeasti. Jo ensimmäisellä kerralla saa aikaan pitkiä palloja ja hyviä nauruja, eikä kuntoakaan tarvitse olla huippuluokkaa. Siksi padel on mainio tapa viettää aikaa ystävien ja perheen kanssa.</p>
+    </section>
+
+    <!--
+      OMAN KUVAN LISÄÄMINEN:
+      1. Tallenna kuva tähän samaan kansioon nimellä padel.jpg
+      2. Poista alla oleva <div class="kuvapaikka">…</div> -lohko
+      3. Poista kommenttimerkit valmiin <img>-rivin ympäriltä (heti lohkon alla)
+    -->
+    <figure class="kuva" style="margin-left:0;margin-right:0;">
+      <div class="kuvapaikka" role="img" aria-label="Paikka padel-kuvalle">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="none" stroke="#c0603f" stroke-width="4" stroke-linecap="round">
+            <ellipse cx="42" cy="38" rx="24" ry="28" transform="rotate(-30 42 38)"/>
+            <line x1="56" y1="60" x2="74" y2="88"/>
+          </g>
+          <g fill="#c0603f" opacity="0.55">
+            <circle cx="34" cy="30" r="3"/><circle cx="44" cy="28" r="3"/>
+            <circle cx="38" cy="40" r="3"/><circle cx="48" cy="38" r="3"/>
+            <circle cx="42" cy="50" r="3"/>
+          </g>
+          <circle cx="80" cy="24" r="9" fill="#e0b25a"/>
+        </svg>
+        <span>Kuva tulossa</span>
+      </div>
+      <!-- <img src="padel.jpg" alt="Padelia pelaamassa"> -->
+    </figure>
+
+    <section>
+      <h2>Kolme hauskaa faktaa</h2>
+      <ol class="faktat">
+        <li class="fakta">
+          <span class="numero">1</span>
+          <h3>Syntyi meksikolaisella pihalla</h3>
+          <p>Padel keksittiin vuonna 1969 Acapulcossa, kun Enrique Corcuera rakensi kentän kotinsa seinien väliin. Hätäratkaisusta tuli maailmanlaji.</p>
+        </li>
+        <li class="fakta">
+          <span class="numero">2</span>
+          <h3>Seinät pelaavat mukana</h3>
+          <p>Pallon saa pelata takaseinän kautta, joten "menetetty" pallo ei olekaan menetetty. Siksi pallorallit venyvät usein ihanan pitkiksi.</p>
+        </li>
+        <li class="fakta">
+          <span class="numero">3</span>
+          <h3>Syöttö lyödään alakautta</h3>
+          <p>Ei tarvita pelottavaa ylälyöntiä, vaan syöttö lähtee rauhassa alakautta. Peli pääsee käyntiin heti, eikä aikaa kulu pallojen keräilyyn.</p>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <strong>Nähdään kentällä!</strong>
+      Ota kaveri mukaan ja kokeile – padel vie mennessään.
+    </footer>
+
+  </div>
+</body>
+</html>
